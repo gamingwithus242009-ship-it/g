@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --neon: rgba(52, 211, 153, 0.35);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    'Plus Jakarta Sans',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background: #020617;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+.app-root {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(16, 185, 129, 0.12), transparent 55%),
+    radial-gradient(900px 500px at 110% 0%, rgba(20, 184, 166, 0.1), transparent 50%),
+    linear-gradient(180deg, #020617 0%, #0f172a 50%, #022c22 100%);
+}
+
+.glass-panel {
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.input-premium {
+  border-radius: 14px;
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  background: rgba(15, 23, 42, 0.85);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.875rem;
+  color: rgb(241 245 249);
+  outline: none;
+  transition:
+    border-color 0.25s var(--ease-out),
+    box-shadow 0.25s var(--ease-out),
+    background-color 0.25s var(--ease-out),
+    transform 0.15s var(--ease-out);
+}
+
+.input-premium::placeholder {
+  color: rgba(148, 163, 184, 0.85);
+}
+
+.input-premium:focus {
+  border-color: rgba(16, 185, 129, 0.55);
+  box-shadow:
+    0 0 0 3px rgba(16, 185, 129, 0.18),
+    0 0 22px var(--neon);
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 16px;
+  padding: 0.85rem 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #047857 0%, #059669 38%, #10b981 72%, #34d399 100%);
+  box-shadow:
+    0 10px 28px rgba(16, 185, 129, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.12) inset;
+  transition:
+    transform 0.25s var(--ease-out),
+    box-shadow 0.25s var(--ease-out),
+    filter 0.25s var(--ease-out);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 14px 36px rgba(16, 185, 129, 0.45),
+    0 0 28px rgba(52, 211, 153, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.14) inset;
+  filter: saturate(1.05);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid rgba(52, 211, 153, 0.85);
+  outline-offset: 3px;
+}
+
+.btn-secondary {
+  border-radius: 16px;
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  padding: 0.85rem 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: rgb(226 232 240);
+  cursor: pointer;
+  background: rgba(30, 41, 59, 0.85);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.25s var(--ease-out),
+    box-shadow 0.25s var(--ease-out),
+    border-color 0.25s var(--ease-out);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow:
+    0 12px 30px rgba(15, 118, 110, 0.15),
+    0 0 22px rgba(52, 211, 153, 0.15);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid rgba(16, 185, 129, 0.45);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
